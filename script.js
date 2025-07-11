@@ -19,8 +19,16 @@ weatherInfo="👏맑음";
   weather.innerText = weatherInfo;
 
 
+  let cityName;
   const city =document.querySelector(".city");
-  city.innerText = result.name;
+  switch(result.name){
+    case"Jamwon-dong" :
+    cityName ="🏢역삼동"
+  }
+  city.innerText = cityName;
+
+  const icon = document.querySelector(".icon");
+  icon.src=`https://openweathermap.org/img/wn/${result.weather[0].icon}@2x.png`;
 });
 };
 
